@@ -1,0 +1,203 @@
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdfcfc;
+}
+
+/* Make header sticky at the top */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 1000; /* Ensure it stays above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #3D7F97;
+}
+
+/* Make footer sticky at the bottom */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 23px;
+    background: #fff;
+    z-index: 1000; /* Ensure it stays above other elements */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+}
+
+body::before, body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 50vw; /* Half of the viewport width */
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    z-index: -1;
+}
+
+body::before {
+    left: 0;
+    background-image: url('../images/cape-viewing.jpeg'); /* Your first image */
+    border-radius: 25px;  
+    margin: 2px; 
+    z-index: 199;
+}
+
+body::after {
+    right: 0;
+    background-image: url('../images/combi.png'); /* Your second image */
+    border-radius: 25px;  
+    margin: 2px; 
+    z-index: 199;
+}
+
+.logo-container {
+    position: relative;
+    width: 200px; /* Adjust based on your logo size */
+    height: 200px; /* Adjust based on your logo size */
+    border-radius: 25px;
+    z-index: 200;
+}
+
+.logo-container img {
+    /* Existing styles */
+    border-radius: 150px;
+    object-fit: cover; /* This will cover the area without losing the aspect ratio */
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Example shadow */
+    transition: box-shadow 0.3s ease; /* Smooth transition for the shadow */
+}
+
+.logo-container img:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+#logo {
+    width: 100%;
+    cursor: pointer;
+}
+
+.visible {
+    opacity: 1; /* Fully visible */
+}
+
+/* Styling for Bubble Elements */
+.bubble {
+    position: absolute;
+    width: 50px; /* Bubble size */
+    height: 50px; /* Bubble size */
+    border-radius: 50%; /* Make it round */
+    background-color: #007bff; /* Example color */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Start hidden */
+    transform: scale(0); /* Start scaled down */
+    transition: transform 0.5s, opacity 0.5s; /* Smooth transition for appearing */
+    cursor: pointer;      
+    border-style: ridge;
+    border-color: #000;
+    transform: translate(-50%, -50%);
+}
+
+#bubble0 {
+    background-color: #f52a06;
+    top: -20%;
+    left: 100%;
+}
+
+#bubble1 {
+    background-color: #0b6110;
+    top: -20%;
+    left: 50%;
+}
+
+#bubble2 {
+    background-color: #0b6110;
+    top: 15%;
+    right: 120%;
+    transform: translate(50%, 50%);
+}
+
+#bubble3 {
+    background-color: #3c0bee;
+    top: 25%;
+    left: 120%;
+}
+
+#bubble4 {
+    background-color: #0b6110;
+    top: -5%;
+    right: 100%;
+    transform: translate(50%, -50%);
+}
+
+#bubble5 {
+    background-color: #fff;
+    top: 100%;
+    left: 10%;
+    transform: translate(-50%, 50%);
+    border-color: #ff000f;
+}
+
+#bubble6 {
+    background-color: #3c0bee;
+    top: 85%;
+    right: 10%;
+    transform: translate(50%, 50%);
+}
+
+#bubble7 {
+    background-color: #3c0bee;
+    top: 75%;
+    left: 120%;
+}
+
+
+.bubble:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+#bubble1:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+    background-color: #4ee265;
+}
+
+#bubble2:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+    background-color: #15d335;
+}
+
+#bubble3:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+    background-color: #89a5f1;
+}
+
+#bubble4:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+    background-color: #f7bb16;
+}
+
+#bubble6:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+    background-color: #494433;
+}
+
+#bubble7:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+    background-color: #e2f106;
+}
+
+
+

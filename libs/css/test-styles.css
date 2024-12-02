@@ -1,0 +1,500 @@
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdfcfc;
+}
+
+/* Make header sticky at the top */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #3D7F97;
+}
+
+/* Make footer sticky at the bottom */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 23px;
+    background: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+}
+
+body::before, body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 50vw; /* Half of the viewport width */
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    z-index: -1;
+}
+
+body::before {
+    left: 0;
+    background-image: url('../images/cape-viewing.jpeg'); /* Your first image */
+    border-radius: 25px;  
+    margin: 2px; 
+    z-index: 199;
+}
+
+body::after {
+    right: 0;
+    background-image: url('../images/combi.png'); /* Your second image */
+    border-radius: 25px;  
+    margin: 2px; 
+    z-index: 199;
+}
+
+.logo-container {
+    position: relative;
+    width: 200px; /* Adjust based on your logo size */
+    height: 200px; /* Adjust based on your logo size */
+    border-radius: 25px;
+    z-index: 1000;
+}
+
+.logo-container img {
+    /* Existing styles */
+    border-radius: 150px;
+    object-fit: cover; /* This will cover the area without losing the aspect ratio */
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Example shadow */
+    transition: box-shadow 0.3s ease; /* Smooth transition for the shadow */
+}
+
+.logo-container img:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+#logo {
+    width: 100%;
+    cursor: pointer;
+}
+
+.visible {
+    opacity: 1; /* Fully visible */
+}
+
+/* Styling for Bubble Elements */
+.bubble {
+    position: absolute;
+    width: 50px; /* Bubble size */
+    height: 50px; /* Bubble size */
+    border-radius: 50%; /* Make it round */
+    background-color: #007bff; /* Example color */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Start hidden */
+    transform: scale(0) translate(-50%, -50%); /* Start scaled down */
+    top: 50%; /* Start at center */
+    left: 50%; /* Start at center */
+    transition: all 0.1s ease; /* Smooth transition */
+    cursor: pointer;      
+    border-style: ridge;
+    border-color: #000;
+}
+
+/* Target positions (as you defined earlier) */
+#bubble0 {
+    top: -20%;
+    left: 50%;
+    transform: scale(0) translate(50%, 50%);
+    background-color: #de2c2e;
+}
+
+#bubble1 {
+    top: -10%;
+    left: 90%;
+    transform: scale(0) translate(50%, 50%);
+    background-color: #74860c;
+}
+
+#bubble2 {
+    top: -10%;
+    left: 5%;
+    transform: scale(0) translate(50%, 50%);
+    background-color: #f5630e;
+}
+
+#bubble3 {
+    top: 50%;
+    left: 120%;
+    transform: scale(0) translate(50%, 50%);
+    background-color: #480bf0;
+}
+
+#bubble4 {
+    top: 50%;
+    left: -20%;
+    transform: scale(0) translate(50%, 50%);
+    background-color: #831d0b;
+}
+
+#bubble5 {
+    top: 150%;
+    right: 100%;
+    transform: scale(0) translate(50%, 50%);
+    background-color: #fa0505;
+}
+
+#bubble6 {
+    top: 85%;
+    left: 115%;
+    transform: scale(0) translate(50%, 50%);
+    background-color: #0a2efc;
+}
+
+#bubble7 {
+    top: 85%;
+    left: -15%;
+    transform: scale(0) translate(50%, 50%);
+    background-color: #633705;    
+}
+
+.bubble:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+#bubble1:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+    background-color: #4ee265;
+}
+
+#bubble2:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+    background-color: #15d335;
+}
+
+#bubble3:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+    background-color: #89a5f1;
+}
+
+#bubble4:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+    background-color: #f7bb16;
+}
+
+#bubble6:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+    background-color: #494433;
+}
+
+#bubble7:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+    background-color: #e2f106;
+}
+
+#closeResponseMessage {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+}
+
+#responseMessage {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Base styles for all overlays */
+.overlay {
+    background: url('../images/cape-viewing.png') top center / cover no-repeat; /* Full-page photo background */
+    position: fixed;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 25px;
+    z-index: 1001;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease;
+    border: 5px solid #fff; 
+}
+
+/* Overlays for ABout*/
+.overlay2 {
+    background: url('../images/wind.jpeg') top center / cover no-repeat; /* Full-page photo background */
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 25px;
+    z-index: 1001;
+    display: none;
+    padding: 10px;
+    height: 700px;
+    overflow-y: auto; /* Allow scrolling if there's a lot of text */
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease;
+    border: 1px solid #fff; 
+}
+
+/* Overlays for Author*/
+.overlay3  {
+    background: url('../images/Author.jpg') top center / cover no-repeat; /* Full-page photo background */
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 25px;
+    z-index: 1001;
+    display: none;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease;
+    border: 1px solid #fff; 
+}
+
+/* Overlays for IT Career*/
+.overlay4  {
+    background: url('../images/tech.png') top center / cover no-repeat; /* Full-page photo background */
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 25px;
+    z-index: 1001;
+    display: none;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease;
+    border: 1px solid #fff; 
+}
+
+/* Overlays for IT Career*/
+.overlay5  {
+    background: url('../images/contact.png') top center / cover no-repeat; /* Full-page photo background */
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 25px;
+    z-index: 1001;
+    display: none;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease;
+    border: 1px solid #fff; 
+}
+
+.overlay-content {
+    background-color: white;
+    padding: 20px;
+    max-width: 100%;
+    width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    border-radius: 8px;
+    position: relative;
+}
+
+/* Close button styling */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 7px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #de2c2e;
+    z-index: 1010;
+}
+
+/* Layout inside overlay */
+.sticky-this {
+    position:sticky;
+    height:auto;
+    top:0px;
+    padding: 5px;
+    overflow: auto;
+  }
+
+  .newspaper {
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px; /* Or whatever */
+    gap: 50px;
+}
+
+.column {
+    flex: 1;
+    margin: auto;  /* Magic! */
+    align-items: center; /* Center-align the image */
+    text-align: center; /* Left-align text within the container */    
+    padding: 25px;
+    color: #3D7F97;
+    border-radius: 25px; 
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    background-color: #F1F1F1;
+    opacity: 1;
+    border: 2px solid #ff6550;
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.column:hover {
+    opacity: 1; /* Full visibility on hover */
+}
+
+.column h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #3D7F97;
+}
+
+.column p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+/* Animation keyframes for each direction */
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInTop {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+/* Slide out to the left */
+@keyframes slideOutLeft {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+/* Slide out to the right */
+@keyframes slideOutRight {
+    from { transform: translateX(0); }
+    to { transform: translateX(100%); }
+}
+
+/* Slide out to the top */
+@keyframes slideOutTop {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100%); }
+}
+
+/* Left overlay animation */
+.overlay-left.active {
+    display: flex;
+    animation: slideInLeft 1s forwards;
+}
+
+/* Right overlay animation */
+.overlay-right.active {
+    display: flex;
+    animation: slideInRight 1s forwards;
+}
+
+/* Top overlay animation */
+.overlay-top.active {
+    display: flex;
+    animation: slideInTop 1s forwards;
+}
+
+/* Left overlay slide-out */
+.overlay-left.closing {
+    animation: slideOutLeft 1s forwards;
+}
+
+/* Right overlay slide-out */
+.overlay-right.closing {
+    animation: slideOutRight 1s forwards;
+}
+
+/* Top overlay slide-out */
+.overlay-top.closing {
+    animation: slideOutTop 1s forwards;
+}
+
+/* Drawers for author*/
+/* Style for the container of the drawers */
+.drawer-container {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #000;
+  }
+  
+  /* Style for each individual drawer */
+  .drawer {
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+  
+  .drawer:first-child {
+    border-top: none; /* Remove top border for the first drawer */
+  }
+  
+  .drawer:last-child {
+    border-bottom: none; /* Remove bottom border for the last drawer */
+  }
+  
+  /* Style for the drawer header */
+  .drawer-header {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    padding: 8px;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    user-select: none; /* Prevent text selection */
+  }
+  
+  /* Style for the content inside the drawer */
+  .drawer-content {
+    display: none; /* Initially hide the content */
+    padding: 10px;
+    background-color: #e9e9e9;
+    border-radius: 4px;
+    margin-top: 8px;
+  }
+  
+  /* When the drawer is active, display content */
+  .drawer.open .drawer-content {
+    display: block;
+  }
+  
+  .drawer.open .drawer-header {
+    background-color: #ddd;
+  }
+  

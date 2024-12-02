@@ -1,0 +1,40 @@
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdfcfc;
+}
+
+
+
+body::before, body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 50vw; /* Half of the viewport width */
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+body::before {
+    left: 0;
+    background-image: url('../images/cape-viewing.jpeg'); /* Your first image */
+    border-radius: 25px;  
+    margin: 2px; 
+    z-index: 199;
+}
+
+body::after {
+    right: 0;
+    background-image: url('../images/combi.png'); /* Your second image */
+    border-radius: 25px;  
+    margin: 2px; 
+    z-index: 199;
+}
+

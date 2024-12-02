@@ -1,0 +1,329 @@
+/* Make header sticky at the top */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #3D7F97;
+}
+
+/* Make footer sticky at the bottom */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 23px;
+    background: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+}
+
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 20px;
+}
+
+.nav-logo {
+    width: 40px; /* Adjust as needed */
+    height: auto;
+}
+
+/* Centering the title */
+h1 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #3D7F97;
+}
+
+/* Centering the title */
+h2 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3D7F97;
+}
+
+/* Hamburger menu on the right */
+.hamburger {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: red;
+    transition: 0.3s;
+}
+
+/* Main menu hidden off-screen initially */
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0; /* Place the menu off-screen to the right */
+    background-color: #fff;
+    width: 200px; /* Adjust width as needed */
+    max-width: 80%;
+    height: 100vh;
+    padding: 5px;
+    gap: 10px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    transform: translateX(100%); /* Start off-screen */
+    z-index: 2;
+}
+
+/* Show menu when active */
+.nav-menu.active {
+    transform: translateX(0); /* Slide menu into view */
+}
+
+/* Close button styling */
+.close-btn {
+    font-size: 1.5rem;
+    color: #f70707;
+    text-align: right;
+    cursor: pointer;
+    padding: 10px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+}
+
+
+.sticky-container {
+    position:relative;    
+  }
+  
+  .sticky-this {
+    background-color: rgb(58, 57, 57); /* code is added here */
+    position:sticky;
+    height:1000px;
+    top:50px;
+    padding: 5px;
+    overflow: auto;
+  }
+
+  .sticky-this:nth-child(1) {
+    background: url('../images/cape-viewing.png') top center / cover no-repeat; /* Full-page photo background */
+    color: #000;
+    overflow-y: auto; /* Allow scrolling if there's a lot of text */
+}  
+
+  /* Specific styling for each .sticky-this section */
+.sticky-this:nth-child(2) {
+    background: url('../images/wind.jpeg') top center / cover no-repeat; /* Full-page photo background */
+    height: 100vh; /* Full viewport height */ 
+    padding-top: 30px;   
+    color: #fff;
+}
+
+.sticky-this:nth-child(3) {
+    background: url('../images/tech.png') top center / cover no-repeat; /* Full-page photo background */
+    background-color: #fff;
+    color: #000;
+    overflow-y: auto; /* Allow scrolling if there's a lot of text */
+}
+
+.sticky-this:nth-child(4) {
+    background: url('../images/foot3.png') top center / cover no-repeat; /* Full-page photo background */
+    background-color: #fff;
+    color: #000;
+    overflow-y: auto; /* Allow scrolling if there's a lot of text */
+}
+
+.newspaper {
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px; /* Or whatever */
+    gap: 50px;
+}
+
+.newspaper after {
+    background: url('../images/cape-viewing.png') top center / cover no-repeat; /* Full-page photo background */
+    opacity: 0.7;
+}
+
+.column {
+    flex: 1;
+    margin: auto;  /* Magic! */
+    align-items: center; /* Center-align the image */
+    text-align: center; /* Left-align text within the container */    
+    padding: 25px;
+    color: #3D7F97;
+    border-radius: 25px; 
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    background-color: #fff;
+    opacity: 0.7;
+    border: 2px solid #ff6550;
+}
+
+
+.column h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #3D7F97;
+}
+
+.column p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.text-content {
+    width: 100%; /* Ensure text takes full width for left alignment */
+    text-align: left; /* Explicitly left-align the text */
+}
+
+.alimg {
+    align-items: center;
+    width: 100%; /* Optional: adds space between text and image */
+
+}
+
+.contact-info {
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: #fff;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.contact-form {
+    background-color: rgba(13, 57, 82, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form .btn-primary {
+    background-color: #3D7F97;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form .btn-primary:hover {
+    background-color: #2b5d6e;
+}
+
+
+/* Style for the container of the drawers */
+.drawer-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Style for each individual drawer */
+  .drawer {
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+  
+  .drawer:first-child {
+    border-top: none; /* Remove top border for the first drawer */
+  }
+  
+  .drawer:last-child {
+    border-bottom: none; /* Remove bottom border for the last drawer */
+  }
+  
+  /* Style for the drawer header */
+  .drawer-header {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    padding: 8px;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    user-select: none; /* Prevent text selection */
+  }
+  
+  /* Style for the content inside the drawer */
+  .drawer-content {
+    display: none; /* Initially hide the content */
+    padding: 10px;
+    background-color: #e9e9e9;
+    border-radius: 4px;
+    margin-top: 8px;
+  }
+  
+  /* When the drawer is active, display content */
+  .drawer.open .drawer-content {
+    display: block;
+  }
+  
+  .drawer.open .drawer-header {
+    background-color: #ddd;
+  }
+  

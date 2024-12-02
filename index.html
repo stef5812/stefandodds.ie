@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/6c609ce956.js" crossorigin="anonymous"></script> 
+    <link rel="icon" type="image/gif" href="libs/images/Logo2.gif">
+    <title>Stefan's site</title>
+    <link rel="stylesheet" href="libs/css/test-styles.css">
+    <script src="libs/js/ajax_script.js" defer></script>
+</head>
+<body>
+    <div class="logo-container" id="logo-container">
+        <img src="libs/images/Logo.svg" alt="Logo" id="logo">
+        <a href="#" onclick="showOverlay('overlay')"><div title="Me" class="bubble" id="bubble0"><i class="fa-brands fa-github-square"></i></div></a> <!-- me -->
+        <a href="#" onclick="showOverlay('overlay-2')"><div title="About" class="bubble" id="bubble1"><i class="fas fa-passport"></i></div></a> <!-- CVs -->
+        <a href="#" onclick="showOverlay('overlay-3')"><div title="Author" class="bubble" id="bubble2"><i class="fas fa-book"></i></div></a> <!-- Stories -->
+        <a href="#" onclick="showOverlay('overlay-left')"><div title="Gallery" class="bubble" id="bubble3"><a href="http://127.0.0.1:8001/admin_section/gallery/" target="_blank"><i class="fas fa-camera"></i></a></div> <!-- Gallery -->
+        <a href="#" onclick="showOverlay('overlay-4')"><div title="IT Career" class="bubble" id="bubble4"><i class="fas fa-laptop-code"></i></div></a> <!-- Programming -->
+        <a href="#" onclick="showOverlay('overlay-left')"><div title="Backend" class="bubble" id="bubble5"><a href="http://127.0.0.1:8001/admin" target="_blank"><i class="fas fa-key"></i></a></div> <!-- Login -->
+        <a href="#" onclick="showOverlay('overlay-left')"><div title="Blog" class="bubble" id="bubble6"><a href="https://stefandodds.wordpress.com/" target="_blank"><i class="fas fa-comment" style="color:rgb(251, 253, 251)"></i></a></div><!-- Blog -->
+        <a href="#" onclick="showOverlay('overlay-5')"><div title="Contact" class="bubble" id="bubble7"><i class="fa-regular fa-address-book"></i></a></div> <!-- CVs -->
+    </div>
+
+    <div id="overlay" class="overlay overlay-left">
+        <span class="close-btn" onclick="closeOverlay('overlay')">&times;</span>
+        <div class="sticky-this">
+            <img src="libs/images/white-hat.png" width="100" height="auto" alt="Hat symbol" class="img-fluid">
+            <br>Name :- Derek Dodds<br>Age :- 64<br><br>
+            <b>Occupations</b>  <br>Adventureur, Writer, Software Developer, Carer, Support-coordinator
+            <br><br><b>Resident </b>
+            Ireland
+            <br><br><b>Contact </b>
+            Phone : +44 7960 537 485 or +353 858 755 227
+            <br>Email : stefan@stefandodds.ie
+        </div>                         
+    </div>
+
+    <div id="overlay-2" class="overlay2 overlay-right">
+        <span class="close-btn" onclick="closeOverlay('overlay-2')">&times;</span>
+        <div class="newspaper" id="future">
+            <div class="column"><p>
+                <img src="libs/images/Hat.png" width="100" height="auto" alt="Hat symbol" class="img-fluid">
+                <h2>Proficient in programming languages:</h2>
+                <br>Saleforce - Apex
+                <br>Python - Django    
+                <br>Javascript, Php, Html, Css, Js, ASP, SQL, and Visual Basic/VBA (MS office programming).
+            </div>
+            <div class="column custom-background">
+                <img src="libs/images/Hat.png" width="100" height="auto" alt="Hat symbol" class="img-fluid"><br>
+                <img src="libs/images/Logo.png" width="176px"  alt="Logo" class="nav-logo"><br><br>
+                <h2>Fictional Writing</h2>
+                <br>The Letter - Political Murder Mystery <br> Written 2016<br><br>
+                <br>Reivers - Romantic Jaunt through the 16th Century <br> Written 2018<br><br>
+                <br>The Murder - Futuristic <br> Written 2019<br>
+
+            </div>
+            <div class="column">
+                <img src="libs/images/Hat.png" width="100" height="auto" alt="Hat symbol" class="img-fluid">                
+                <h2>Living</h2>
+                <br>Born - Tanzania - 1968
+                <br>Hertford - 1976-2004
+                <br>Round the world - 1990
+                <br>Africa - 1998/1999
+                <br>France - 2004-2018
+                <br>Moved to Ireland - 2020
+            </div>           
+        </div>
+    </div>     
+
+    <div id="overlay-3" class="overlay2 overlay-top">
+        <span class="close-btn" onclick="closeOverlay('overlay-3')">&times;</span>
+
+        <div class="drawer-container">
+            <div class="drawer" id="drawer1">
+              <div class="drawer-header">The letter</div>
+              <div class="drawer-content">A thriller based around a true event in Bautzen Germany 2017 when 
+                a bus having transported North African Immigrants first arrived. The plot twists though the changing 
+            world of politics. Involving a terrorist plot</div>
+            <a href="libs/repository/The letter.pdf" download>
+                <img src="libs/images/download.png" width="50" height="auto" alt="Hat symbol" class="img-fluid">
+              </a>
+            
+            </div>
+            <div class="drawer" id="drawer2">
+              <div class="drawer-header">Reivers</div>
+              <div class="drawer-content">A romantic romp through the 16/17th century of the border country between 
+                England and scotland tracing the Dodds family history through a ficticious situation</div>
+                <a href="libs/repository/Reivers.pdf" download>
+                    <img src="libs/images/download.png" width="50" height="auto" alt="Hat symbol" class="img-fluid">
+                  </a>                        
+            </div>
+            <div class="drawer" id="drawer3">
+              <div class="drawer-header">The Murder</div>
+              <div class="drawer-content"> 4 Teenagers are returning from school when they witness something that changes their lives. 
+                Near future sci-fi story with a twist</div>
+                <a href="libs/repository/The murder.pdf" download>
+                    <img src="libs/images/download.png" width="50" height="auto" alt="Hat symbol" class="img-fluid">
+                  </a>                        
+            </div>
+        </div> 
+    </div> 
+    
+    <div id="overlay-4" class="overlay4 overlay-left">
+        <span class="close-btn" onclick="closeOverlay('overlay-4')">&times;</span>
+        <div class="sticky-this">
+            <div class="newspaper" id="future">
+                <div class="column"><p>
+                    <h1>Past experiences as a programmer</h1>
+
+                </div>
+                <div class="column custom-background">
+                    <img src="libs/images/Hat.png" width="100" height="auto" alt="Hat symbol" class="img-fluid">
+                    <h2>1. Companies </h2><br> Val Aventure, Sancy Studios, Animilo, Activate-it solutions, <br>
+                    MSS Productions, EME Ltd, Easylook Computing, IDC uk, <br>
+                    Butterworths, Connaught Air Services, MFI Insurance <br><br>
+                  
+                </div>
+                <div class="column">
+                    <img src="libs/images/Hat.png" width="100" height="auto" alt="Hat symbol" class="img-fluid">                
+                    <h2>2. Industries</h2><br> Tourism, Banking, IT, Media, <br>
+                    Training and Delivery Services
+
+                </div>           
+            </div>
+        </div>    
+    </div>    
+    
+    <div id="overlay-5" class="overlay4 overlay-right">
+        <span class="close-btn" onclick="closeOverlay('overlay-5')">&times;</span>
+        <div class="sticky-this">
+            <div class="newspaper">
+                <h1>Welcome to Stefan Dodds' Site</h1>
+                <button id="load-template">Load Dynamic Content</button>
+                <div id="dynamic-container">
+                    <!-- Content from Django will load here -->
+                </div>
+            </div>
+        </div>   
+    </div>    
+    
+    <div id="admin-login-container" style="width: 100%; height: 500px; border: 1px solid #ccc;">
+        <iframe 
+            src="http://127.0.0.1:8001/admin/login/?next=/admin/" 
+            style="width: 100%; height: 100%; border: none;" 
+            title="Admin Login">
+        </iframe>
+    </div>    
+
+    <footer class="text-center">
+        <p>&copy; Stefan Dodds - Software developer - 2024 stefandodds.ie. All rights reserved.</p>
+    </footer>
+
+    <script src="libs/js/test-script-overlay.js"></script>    
+    <script src="libs/js/test-scripts.js"></script>
+</body>
+</html>
+

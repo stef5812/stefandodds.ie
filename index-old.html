@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" type="image/gif" href="libs/images/Logo2.gif">
+    <title>Stefan's site</title>
+    <link rel="stylesheet" href="libs/css/styles.css">
+    <link rel="stylesheet" href="libs/css/menu-content.css">
+    <link rel="stylesheet" href="libs/css/forms.css">
+</head>
+<body>
+    <div class="logo-container" id="logo-container">
+        <img src="libs/images/Logo.svg" alt="Logo" id="logo">
+        <div title="me" class="bubble" id="bubble0"><i class="fas fa-me"></i></div> <!-- me -->
+        <div title="About" class="bubble" id="bubble1"><i class="fas fa-passport"></i></div> <!-- CVs -->
+        <div title="Author" class="bubble" id="bubble2"><i class="fas fa-book"></i></div> <!-- Stories -->
+        <div title="Gallery" class="bubble" id="bubble3" ><i class="fas fa-camera"></i></div> <!-- Gallery -->
+        <div title="github/Samples" class="bubble" id="bubble4"><i class="fas fa-laptop-code"></i></div> <!-- Programming -->
+        <div title="Backend" class="bubble" id="bubble5"><a href="https://stefandodds.ie/admin" target="_blank"><i class="fas fa-key"></i></a></div> <!-- Login -->
+        <div title="Blog" class="bubble" id="bubble6"><a href="https://stefandodds.wordpress.com/" target="_blank"><i class="fas fa-comment" style="color:rgb(251, 253, 251)"></i></a></div><!-- Blog -->
+        <div title="Contact" class="bubble" id="bubble7"><i class="fa-light fa-file-signature"></i></div> <!-- CVs -->
+    </div>
+
+    <div id="loginPanel" class="login-panel hidden">
+        <button id="close-Login-Panel">✖</button>
+    </div>
+
+    <div id="me-Panel" class="me-panel hidden">
+        <div class="sticky-this">
+            <img src="libs/images/white-hat.png" width="100" height="auto" alt="Hat symbol" class="img-fluid">
+            <br>Name :- Derek Dodds<br>Age :- 64<br><br>
+            <b>Occupations</b>  <br>Adventureur, Writer, Software Developer, Carer, Support-coordinator
+            <br><br><b>Resident </b>
+            Ireland
+            <br><br><b>Contact </b>
+            Phone : +44 7960 537 485 or +353 858 755 227
+            <br>Email : stefan@stefandodds.ie
+        </div>     
+    </div>    
+
+    <div id="Personal-Panel" class="Personal-panel hidden">
+        <div class="sticky-this"><button id="close-Personal-Panel">✖</button>
+            <div class="newspaper" id="future">
+                <div class="column"><p>
+                    <img src="libs/images/Hat.png" width="100" height="auto" alt="Hat symbol" class="img-fluid">
+                    <h2>Proficient in programming languages:</h2>
+                    <br>Saleforce - Apex
+                    <br>Python - Django    
+                    <br>Javascript, Php, Html, Css, Js, ASP, SQL, and Visual Basic/VBA (MS office programming).
+                </div>
+                <div class="column custom-background">
+                    <img src="libs/images/Hat.png" width="100" height="auto" alt="Hat symbol" class="img-fluid"><br>
+                    <img src="libs/images/Logo.png" width="176px"  alt="Logo" class="nav-logo"><br><br>
+                    <h2>Fictional Writing</h2>
+                    <br>The Letter - Political Murder Mystery <br> Written 2016<br><br>
+                    <br>Reivers - Romantic Jaunt through the 16th Century <br> Written 2018<br><br>
+                    <br>The Murder - Futuristic <br> Written 2019<br>
+
+                </div>
+                <div class="column">
+                    <img src="libs/images/Hat.png" width="100" height="auto" alt="Hat symbol" class="img-fluid">                
+                    <h2>Living</h2>
+                    <br>Born - Tanzania - 1968
+                    <br>Hertford - 1976-2004
+                    <br>Round the world - 1990
+                    <br>Africa - 1998/1999
+                    <br>France - 2004-2018
+                    <br>Moved to Ireland - 2020
+                </div>           
+            </div>
+        </div>         
+    </div>
+
+    <div id="Author-Panel" class="Author-panel hidden">
+        <button id="close-Author-Panel">✖</button>
+            <div class="drawer-container">
+                <div class="drawer" id="drawer1">
+                  <div class="drawer-header">The letter</div>
+                  <div class="drawer-content">A thriller based around a true event in Bautzen Germany 2017 when 
+                    a bus having transported North African Immigrants first arrived. The plot twists though the changing 
+                world of politics. Involving a terrorist plot</div>
+                <a href="libs/repository/The letter.pdf" download>
+                    <img src="libs/images/download.png" width="50" height="auto" alt="Hat symbol" class="img-fluid">
+                  </a>
+                
+                </div>
+                <div class="drawer" id="drawer2">
+                  <div class="drawer-header">Reivers</div>
+                  <div class="drawer-content">A romantic romp through the 16/17th century of the border country between 
+                    England abnd scotland tracing the Dodds family history through a ficticious situation</div>
+                    <a href="libs/repository/Reivers.pdf" download>
+                        <img src="libs/images/download.png" width="50" height="auto" alt="Hat symbol" class="img-fluid">
+                      </a>                        
+                </div>
+                <div class="drawer" id="drawer3">
+                  <div class="drawer-header">The Murder</div>
+                  <div class="drawer-content"> 4 Teenagers are returning from school when they witness something that changes their lives. 
+                    Near future sci-fi story with a twist</div>
+                    <a href="libs/repository/The murder.pdf" download>
+                        <img src="libs/images/download.png" width="50" height="auto" alt="Hat symbol" class="img-fluid">
+                      </a>                        
+                </div>
+            </div>          
+        
+    </div>   
+
+    <div id="Coding-Panel" class="Coding-panel hidden">
+        <button id="close-Coding-Panel">✖</button>
+        <div class="sticky-this">
+            <div class="newspaper" id="future">
+                <div class="column"><p>
+                    <h1>Past experiences as a programmer</h1>
+
+                </div>
+                <div class="column custom-background">
+                    <img src="libs/images/Hat.png" width="100" height="auto" alt="Hat symbol" class="img-fluid">
+                    <h2>1. Companies </h2><br> Val Aventure, Sancy Studios, Animilo, Activate-it solutions, <br>
+                    MSS Productions, EME Ltd, Easylook Computing, IDC uk, <br>
+                    Butterworths, Connaught Air Services, MFI Insurance <br><br>
+                  
+                </div>
+                <div class="column">
+                    <img src="libs/images/Hat.png" width="100" height="auto" alt="Hat symbol" class="img-fluid">                
+                    <h2>2. Industries</h2><br> Tourism, Banking, IT, Media, <br>
+                    Training and Delivery Services
+
+                </div>           
+            </div>
+        </div>        
+        
+    </div>  
+    
+  
+    
+    <div id="Contact-Panel" class="contact-panel hidden">
+        <button id="close-Contact-Panel">✖</button>
+        <div class="sticky-this">
+            <div class="newspaper">
+                <div class="column">
+                    <h2>Contact Us</h2>
+                    <p>Email: <a href="mailto:stefan@stefandodds.ie">stefan@stefandodds.ie</a></p>
+                    <p>IE Phone: +353 858 755 227</p>
+                    <p>UK Phone: +44 796 053 7485</p>
+                    <p>Address: Dreenavogig, Ardgroom, <br>Bantry, Co Cork, Ireland, P75 XH99</p>
+                </div>
+                <div class="column">
+                    <form action="libs/php/submit_contact.php" method="POST">
+                        <label for="user_email">Your Email:</label>
+                        <input type="email" style="width: 250px" id="user_email" name="user_email" size="50px" required>
+                        <label for="comments">Comments:</label>
+                        <textarea id="comments" style="width: 250px" name="comments" required></textarea>
+                        <button type="submit" style="width: 400px">Send</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <p>&copy; Stefan Dodds - Software developer - 2024 stefandodds.ie. All rights reserved.</p>
+    </footer>
+
+    <script src="libs/js/drawer-script.js"></script>    
+    <script src="libs/js/scripts.js"></script>
+</body>
+</html>
+

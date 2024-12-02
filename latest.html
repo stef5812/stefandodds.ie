@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stefans website</title>
+    
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="libs/css/latest-styles.css">
+</head>
+<body>
+    <header>
+        <nav class="d-flex justify-content-between align-items-center p-1">
+            <!-- Logo/Image on the left -->
+            <img src="libs/images/Logo.png" width="76" alt="Logo" class="nav-logo">
+    
+            <!-- Centered Text (e.g., Site Title) -->
+            <h1>Me</h1>
+    
+            <!-- Hamburger icon on the right -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    
+            <!-- Menu items (hidden initially) -->
+            <ul class="nav-menu">
+                <li class="close-btn" onclick="toggleMenu()">✖</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Experience</a></li>
+                <li><a href="#contact">Blog</a></li>
+                <li><a href="#contact">Downloads</a></li>
+                <li><a href="#admin">Admin</a></li>                    
+            </ul>
+        </nav>
+    </header>
+    <div class="sticky-container">
+        <div class="sticky-this">
+            <div class="newspaper" id="future">
+                <div class="column"><p>
+                    <img src="libs/images/Hat.png" width="100" height="auto" alt="Hat symbol" class="img-fluid">
+                    <h2>Proficient in programming languages:</h2>
+                    <br>Saleforce - Apex
+                    <br>Python - Django    
+                    <br>Javascript - React
+                    <br>Php
+                    <br>Html, Css, Js, ASP, SQL, and Visual Basic/VBA (MS office programming).
+                </div>
+                <div class="column custom-background">
+                    <img src="libs/images/Hat.png" width="100" height="auto" alt="Hat symbol" class="img-fluid"><br>
+                    <img src="libs/images/Logo.png" width="176px"  alt="Logo" class="nav-logo"><br><br>
+                    <h2>Fictional Writing</h2>
+                    <br>The Letter - Political Murder Mystery - Written 2016
+                    <br>Reivers - Romantic Jaunt through the 16th Century - Written 2018
+                    <br>The Murder - Futuristic - Written 2019
+
+                </div>
+                <div class="column">
+                    <img src="libs/images/Hat.png" width="100" height="auto" alt="Hat symbol" class="img-fluid">                
+                    <h2>Living</h2>
+                    <br>Born - Tanzania - 1968
+                    <br>Hertford - 1976-2004
+                    <br>Round the world - 1990
+                    <br>Africa - 1998/1999
+                    <br>France - 2004-2018
+                    <br>Moved to Ireland - 2020
+                </div>           
+            </div>
+        </div>        
+        <div class="sticky-this">
+            
+            <img src="libs/images/white-hat.png" width="100" height="auto" alt="Hat symbol" class="img-fluid">
+            <br>Name :- Derek Dodds<br>Age :- 64<br><br>
+            <b>Occupations</b>  <br>Adventureur, Writer, Software Developer, Carer, Support-coordinator
+
+            <br><br><b>Resident </b>
+            Ireland
+
+            <br><br><b>Contact </b>
+            Phone : +44 7960 537 485 or +353 858 755 227
+            <br>Email : stefan@stefandodds.ie
+
+
+        </div>
+
+        <div class="sticky-this">
+            <div class="newspaper" id="future">
+                <div class="column"><p>
+                    <h1>Past experiences</h1>
+
+                </div>
+                <div class="column custom-background">
+                    <img src="libs/images/Hat.png" width="100" height="auto" alt="Hat symbol" class="img-fluid">
+                    <h2>1. Companies </h2><br> Val Aventure, Sancy Studios, Animilo, Activate-it solutions, <br>
+                    MSS Productions, EME Ltd, Easylook Computing, IDC uk, <br>
+                    Butterworths, Connaught Air Services, MFI Insurance <br><br>
+                  
+                </div>
+                <div class="column">
+                    <img src="libs/images/Hat.png" width="100" height="auto" alt="Hat symbol" class="img-fluid">                
+                    <h2>2. Industries</h2><br> Tourism, Banking, IT, Media, <br>
+                    Training and Delivery Services
+
+                </div>           
+            </div>
+        </div>
+        <div class="sticky-this">
+                <br><br><br><br><br><br><h1>Story Repository</h2><br>
+                <div class="drawer-container">
+                    <div class="drawer" id="drawer1">
+                      <div class="drawer-header">The letter</div>
+                      <div class="drawer-content">A thriller based around a true event in Bautzen Germany 2017 when 
+                        a bus having transported North African Immigrants first arrived. The plot twists though the changing 
+                    world of politics. Involving a terrorist plot</div>
+                    <a href="libs/repository/The letter.pdf" download>
+                        <img src="libs/images/download.png" width="50" height="auto" alt="Hat symbol" class="img-fluid">
+                      </a>
+                    
+                    </div>
+                    <div class="drawer" id="drawer2">
+                      <div class="drawer-header">Reivers</div>
+                      <div class="drawer-content">A romabntic romp through the 16/17th century of the border country between 
+                        England abnd scotland tracing the Dodds family history through a ficticious situation</div>
+                        <a href="libs/repository/Reivers.pdf" download>
+                            <img src="libs/images/download.png" width="50" height="auto" alt="Hat symbol" class="img-fluid">
+                          </a>                        
+                    </div>
+                    <div class="drawer" id="drawer3">
+                      <div class="drawer-header">The Murder</div>
+                      <div class="drawer-content"> 4 Teenagers are returning from scholl when they witness something that changes their lives. 
+                        Near future sci-fi story with a twist</div>
+                        <a href="libs/repository/The murder.pdf" download>
+                            <img src="libs/images/download.png" width="50" height="auto" alt="Hat symbol" class="img-fluid">
+                          </a>                        
+                    </div>
+                </div>                  
+        </div>                     
+    </div>
+    <footer class="text-center">
+        <p>&copy; Stefan Dodds - Software developer - 2024 stefandodds.ie. All rights reserved.</p>
+    </footer>
+
+    <!-- jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="libs/js/latest-script.js"></script>
+    <script src="libs/js/drawer-script.js"></script>
+</body>
+</html>

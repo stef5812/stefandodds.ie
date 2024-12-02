@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centered Menu</title>
+<link rel="stylesheet" href="libs/css/style.css">
+</head>
+<body>
+
+<div id="menu-button" onclick="toggleMenu()">
+    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <!-- Extended circular path for the curved text to follow -->
+        <path id="fullCirclePath" fill="none" stroke="none" 
+              d="M100,25 a75,75 0 1,1 0,150 a75,75 0 1,1 0,-150" />
+        <!-- Apply the text to the full circular path -->
+        <text font-family="Arial" font-size="12.75" fill="black">
+            <textPath xlink:href="#fullCirclePath" startOffset="0%">
+                Derek Stefan John Dodds - Derek Stefan John Dodds - Derek Stefan John Dodds - 
+            </textPath>
+        </text>
+        <!-- Evenly spaced D/D and the line -->
+        <text x="90" y="88" font-family="Arial" font-size="40" fill="grey">D</text>
+        <line x1="75" y1="100" x2="130" y2="100" stroke="grey" stroke-width="2"/>
+        <text x="90" y="140" font-family="Arial" font-size="40" fill="grey">D</text>
+    </svg>
+</div>
+
+<div id="menu-options" class="hidden">
+  <div class="menu-item" id="item-about">ABOUT</div>
+  <div class="menu-item" id="item-contact">CONTACT</div>
+  <div class="menu-item" id="item-sample">SAMPLE</div>
+  <div class="menu-item" id="item-other">OTHER</div>
+</div>
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff0000" fill-opacity="1" d="M0,160L80,176C160,192,320,224,480,213.3C640,203,800,149,960,138.7C1120,128,1280,160,1360,176L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> -->
+
+<script src="libs/js/script.js"></script>
+</body>
+</html>
+
