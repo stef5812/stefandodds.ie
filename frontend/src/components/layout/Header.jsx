@@ -1,7 +1,7 @@
 // 1) Create: src/components/layout/Header.jsx
 // Simple sticky header with anchor links to Projects / Experience / Contact.
 import Container from "./Container";
-import Logo from "../../assets/images/logo.png";
+import Logo from "../../assets/images/new-logo2.png";
 
 export default function Header() {
   return (
