@@ -49,7 +49,7 @@ export default function Contact() {
             <p className="text-sm font-medium text-zinc-400">Contact</p>
             <h2 className="mt-2 text-3xl font-semibold tracking-tight text-white">
               Let’s build{" "}
-              <span className="bg-gradient-to-r from-orange-400 to-emerald-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-orange-400 to-purple-400 bg-clip-text text-transparent">
 
                 something useful
               </span>              
@@ -160,7 +160,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="mt-2 inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-orange-500 to-emerald-500 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:opacity-90"
+                  className="mt-2 inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-orange-500 to-purple-500 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:opacity-90"
                 >
                   Send message
                 </button>

@@ -14,7 +14,7 @@ export default function Projects() {
 
           <h2 className="mt-2 text-3xl font-semibold tracking-tight text-zinc-900">
             Real applications,{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-emerald-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-500 to-purple-500 bg-clip-text text-transparent">
                 built end to end
             </span>
             </h2>
@@ -26,7 +26,7 @@ export default function Projects() {
             constraints.
           </p>
 
-          <div className="mt-8 h-px w-full bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent" />
+          <div className="mt-8 h-px w-full bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
         </div>
 
         <div className="mt-12 grid gap-8 md:grid-cols-2">

@@ -16,13 +16,13 @@ export default function Hero() {
       <Container>
         <div className="relative pt-24 pb-20 sm:pt-28 sm:pb-28 max-w-3xl">
           {/* Brand pill */}
-          <p className="inline-block rounded-full bg-gradient-to-r from-orange-500/15 to-emerald-500/15 px-3 py-1 text-xs font-medium text-white ring-1 ring-orange-500/25">
+          <p className="inline-block rounded-full bg-gradient-to-r from-orange-500/15 to-purple-500/15 px-3 py-1 text-xs font-medium text-white ring-1 ring-orange-500/25">
             Full Stack • Systems • Delivery
           </p>
 
           <h1 className="mt-5 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
             I build{" "}
-            <span className="bg-gradient-to-r from-orange-400 to-emerald-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-400 to-purple-400 bg-clip-text text-transparent">
               software that solves real problems
             </span>{" "}
             — end to end.
