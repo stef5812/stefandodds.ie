@@ -3,6 +3,7 @@ import ProjectCard from "./ProjectCard";
 
 import recipeImg from "../../assets/images/recipe-header.jpg";
 import libraryImg from "../../assets/images/library-bg.png";
+import serviceLocatorImg from "../../assets/images/service-bg.jpg";
 
 export default function Projects() {
   return (
@@ -30,6 +31,28 @@ export default function Projects() {
         </div>
 
         <div className="mt-12 grid gap-8 md:grid-cols-2">
+
+        <ProjectCard
+            title="Service Locator"
+            description="An interactive service-locator map for Ireland, allowing users to find health, social, and community services by category. Features custom SVG map markers, category toggles, Eircode search with automatic zoom, and click-to-view service details."
+            stack={[
+              "React",
+              "Vite",
+              "@vis.gl/react-google-maps",
+              "Google Maps JavaScript API",
+              "Node.js",
+              "Express",
+              "PostgreSQL",
+              "Prisma",
+              "Docker",
+              "PM2",
+              "Nginx",
+              "Cloudflare",
+            ]}
+            href="https://stefandodds.ie/service-locator/"   // adjust if needed
+            image={serviceLocatorImg}                       // screenshot / hero image
+          />
+
           <ProjectCard
             title="HalfYourBook"
             description="A full publishing platform allowing authors to showcase large previews of their work, manage books, uploads, roles, and direct readers to external sales."
