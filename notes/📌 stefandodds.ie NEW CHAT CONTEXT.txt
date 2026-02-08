@@ -1,0 +1,192 @@
+📌 stefandodds.ie NEW CHAT CONTEXT — stefandodds.ie Portfolio (Deploy to Server)
+
+Project: stefandodds.ie (Personal Portfolio)
+Owner: Stefan Dodds
+Repo: https://github.com/stef5812/stefandodds.ie
+
+Stack: React + Vite + Tailwind (Frontend) / Node.js + Express (Backend)
+
+🧱 Project Structure
+stefandodds.ie/
+├── frontend/
+│   ├── public/
+│   │   └── logo.png            (favicon)
+│   ├── src/
+│   │   ├── assets/
+│   │   │   └── images/
+│   │   │       ├── logo.svg    (header logo)
+│   │   │       ├── wind.jpeg
+│   │   │       └── cliff.jpeg
+│   │   ├── components/
+│   │   │   ├── layout/
+│   │   │   │   ├── Container.jsx
+│   │   │   │   └── Header.jsx
+│   │   │   └── sections/
+│   │   │       ├── Hero.jsx
+│   │   │       ├── Projects.jsx
+│   │   │       ├── ProjectCard.jsx
+│   │   │       ├── Experience.jsx
+│   │   │       └── Contact.jsx
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
+│   ├── index.html
+│   ├── tailwind.config.cjs
+│   ├── postcss.config.cjs
+│   ├── vite.config.js
+│   └── package.json
+│
+├── backend/
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   └── contact.controller.js
+│   │   ├── routes/
+│   │   │   └── contact.routes.js
+│   │   ├── services/
+│   │   │   └── mail.service.js
+│   │   ├── app.js
+│   │   └── server.js
+│   ├── package.json
+│   └── package-lock.json
+│
+├── .gitignore
+├── package.json
+└── package-lock.json
+
+🎨 Frontend (React + Vite + Tailwind)
+
+Theme
+
+Light theme (white / zinc)
+
+Text: zinc-900 / zinc-600
+
+Brand accents: orange → green gradient
+
+Logo colours integrated subtly (no heavy backgrounds)
+
+Key UI elements
+
+Sticky header with logo + gradient underline hover
+
+Hero section with branded pill and gradient headline highlight
+
+Projects section with corrected typography (text-3xl, font-semibold)
+
+Project cards with subtle hover ring + gradient CTA text
+
+Contact form with branded gradient submit button
+
+Footer integrated in Contact section
+
+Tailwind
+
+Tailwind v3 (stable)
+
+index.css uses @tailwind base/components/utilities
+
+No dark mode yet (planned later)
+
+Favicon
+
+frontend/public/logo.png
+
+Linked via /logo.png in index.html
+
+Cache-busted if needed with ?v=2
+
+📬 Backend (Node + Express)
+
+Port
+
+Local: http://127.0.0.1:3005
+
+Endpoint
+
+POST /api/contact
+
+
+Payload
+
+{
+  "name": "string",
+  "email": "string",
+  "message": "string"
+}
+
+
+Behaviour
+
+Validates required fields
+
+Returns { ok: true } on success
+
+Email sending via Nodemailer
+
+SMTP intentionally disabled in dev (placeholder host removed)
+
+Backend continues gracefully even if email fails
+
+Status
+
+API tested successfully via curl
+
+Frontend contact form wired and working
+
+🔐 Environment & Safety
+
+.env files ignored via .gitignore
+
+node_modules/ ignored
+
+dist/ ignored
+
+No secrets committed
+
+🧑‍💻 Git Status
+
+Repo created from scratch
+
+Initial commit prepared
+
+Clean .gitignore
+
+Windows CRLF warnings acknowledged (safe)
+
+🚀 Deployment Intent (next step)
+
+Target:
+
+Hostinger VPS
+
+Nginx serving built frontend
+
+Backend running via Node / PM2
+
+Frontend build via npm run build
+
+Backend started separately
+
+🧠 Known Gotchas (remember this)
+
+Vite assets must be in public/ for root paths
+
+Favicons are aggressively cached
+
+Tailwind config must match Vite + ESM setup
+
+SMTP should only be enabled on the server with real credentials
+
+🎯 Next tasks when deploying
+
+git pull on server
+
+Build frontend (npm run build)
+
+Configure Nginx root to /frontend/dist
+
+Proxy /api → backend port
+
+Start backend with PM2
+
+Add real SMTP creds (optional)
