@@ -23,7 +23,7 @@ export async function sendContactEmail({ name, email, message }) {
     auth: { user: SMTP_USER, pass: SMTP_PASS },
   });
 
-  const subject = `Portfolio contact from ${name}`;
+  const subject = `New Contact Form Message | ${name} | stefandodds.ie`;;
   const text = `Name: ${name}\nEmail: ${email}\n\n${message}`;
 
   await transporter.sendMail({
