@@ -46,7 +46,8 @@ export default function Header() {
               </a>
 
               <a
-                href="https://auth.stefandodds.ie/"
+                href="https://auth.stefandodds.ie/login?from=portfolio&next=/menu"
+                
                 className="rounded-full bg-gradient-to-r from-green-500 to-green-600 px-4 py-2 text-sm font-semibold text-white shadow-md ring-1 ring-green-400/70 transition-all duration-300 hover:-translate-y-0.5 hover:from-green-600 hover:to-green-700 hover:shadow-[0_0_14px_rgba(34,197,94,0.45)]"
               >
                 Admin

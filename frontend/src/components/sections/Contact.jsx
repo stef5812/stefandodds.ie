@@ -99,10 +99,7 @@ export default function Contact() {
               <h3 className="text-lg font-semibold text-zinc-900">
                 Send a message
               </h3>
-              <p className="mt-2 text-sm text-zinc-600">
-                (This form is UI-only for now. Next step: connect to your
-                backend.)
-              </p>
+
 
               <form
                 className="mt-6 grid gap-4"
