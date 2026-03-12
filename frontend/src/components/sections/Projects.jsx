@@ -3,76 +3,90 @@ import ProjectCard from "./ProjectCard";
 
 import recipeImg from "../../assets/images/recipe-header.jpg";
 import libraryImg from "../../assets/images/library-bg.png";
-import serviceLocatorImg from "../../assets/images/map-app-project-bg.png";
+import serviceLocatorImg from "../../assets/images/service-locator.png";
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-white py-20">
+    <section
+      id="projects"
+      className="relative overflow-hidden bg-white py-20"
+    >
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.08),transparent_28%),radial-gradient(circle_at_top_left,rgba(161,161,170,0.08),transparent_30%)]" />
+
       <Container>
-      <div className="mt-12 grid gap-8 md:grid-cols-2">
-  {/* Featured project: full width */}
-  <div className="md:col-span-2">
-    <ProjectCard
-      featured
-      title="Integrated Service Locator & CRM Platform"
-      description="An enterprise-ready service locator platform built with React, Node.js and PostgreSQL, designed to integrate live public datasets with CRM systems in real time. The application has been connected to Salesforce CRM using Apex (APX), demonstrating secure API integration and bidirectional data workflows. Features include custom SVG map markers, category toggles, Eircode search with automatic zoom, and click-to-view service details. The current public version is a demonstration build due to API usage costs, and the platform can be easily packaged as an Android mobile application."
-      stack={[
-        "React",
-        "Vite",
-        "@vis.gl/react-google-maps",
-        "Google Maps JavaScript API",
-        "Node.js",
-        "Express",
-        "PostgreSQL",
-        "Prisma",
-        "Salesforce Apex",
-        "REST APIs",
-        "Docker",
-        "PM2",
-        "Nginx",
-        "Cloudflare",
-      ]}
-      href="https://stefandodds.ie/service-locator/"
-      image={serviceLocatorImg}
-    />
-  </div>
+        <div className="relative max-w-2xl">
+          <p className="text-sm font-medium tracking-wide text-green-600">
+            Projects
+          </p>
 
-  {/* Other projects: normal grid items */}
-  <ProjectCard
-    title="HalfYourBook"
-    description="A full publishing platform allowing authors to showcase large previews of their work, manage books, uploads, roles, and direct readers to external sales."
-    stack={[
-      "React",
-      "Vite",
-      "Node.js",
-      "Express",
-      "Prisma",
-      "PostgreSQL",
-      "Docker",
-      "PM2",
-      "Nginx",
-      "Cloudflare",
-    ]}
-    href="https://stefandodds.ie/halfyourbook/"
-    image={libraryImg}
-  />
+          <h2 className="mt-2 text-3xl font-semibold tracking-tight text-zinc-900">
+            Real applications,{" "}
+            <span className="bg-gradient-to-r from-zinc-500 via-zinc-300 to-green-500 bg-clip-text text-transparent">
+              built end to end
+            </span>
+          </h2>
 
-  <ProjectCard
-    title="Recipe App"
-    description="A structured recipe management system focused on clean data models, staged cooking steps, ingredient linking, and media handling."
-    stack={[
-      "React",
-      "Node.js",
-      "PostgreSQL",
-      "Prisma",
-      "Docker",
-      "UX Design",
-    ]}
-    href="https://stefandodds.ie/recipe-app/"
-    image={recipeImg}
-  />
-</div>
+          <p className="mt-4 text-base leading-relaxed text-zinc-600">
+            These are not demos or tutorials. They are production systems,
+            designed, built, deployed, and maintained with real users and real
+            constraints.
+          </p>
 
+          <div className="mt-8 h-px w-full bg-gradient-to-r from-transparent via-green-500/35 to-transparent" />
+        </div>
+
+        <div className="relative mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          <ProjectCard
+            title="HalfYourBook"
+            description="A full publishing platform allowing authors to showcase large previews of their work, manage books, uploads, roles, and direct readers to external sales."
+            stack={[
+              "React",
+              "Vite",
+              "Node.js",
+              "Express",
+              "Prisma",
+              "PostgreSQL",
+              "Docker",
+              "PM2",
+              "Nginx",
+              "Cloudflare",
+            ]}
+            href="https://stefandodds.ie/halfyourbook/"
+            image={libraryImg}
+          />
+
+          <ProjectCard
+            title="Recipe App"
+            description="A structured recipe management system focused on clean data models, staged cooking steps, ingredient linking, and media handling."
+            stack={[
+              "React",
+              "Node.js",
+              "PostgreSQL",
+              "Prisma",
+              "Docker",
+              "UX Design",
+            ]}
+            href="#"
+            image={recipeImg}
+          />
+
+          <ProjectCard
+            title="Service Locator"
+            description="An interactive location-based resource finder built to help users quickly discover useful nearby services, with mapping, category filtering, and practical local search."
+            stack={[
+              "React",
+              "Google Maps",
+              "Node.js",
+              "Express",
+              "PostgreSQL",
+              "Prisma",
+              "Docker",
+              "Nginx",
+            ]}
+            href="https://service-locator.stefandodds.ie"
+            image={serviceLocatorImg}
+          />
+        </div>
       </Container>
     </section>
   );
