@@ -66,7 +66,7 @@ export default function Projects() {
               "Docker",
               "UX Design",
             ]}
-            href="#"
+            href="https://stefandodds.ie/recipe-app/"
             image={recipeImg}
           />
 
@@ -83,7 +83,7 @@ export default function Projects() {
               "Docker",
               "Nginx",
             ]}
-            href="https://service-locator.stefandodds.ie"
+            href="https://stefandodds.ie/service-locator/"
             image={serviceLocatorImg}
           />
         </div>
