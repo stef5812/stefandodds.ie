@@ -18,3 +18,10 @@ yarn-error.log*
 # OS
 .DS_Store
 Thumbs.db
+
+.vscode/
+node_modules/
+dist/
+notes/
+*.tmp
+*~tmp
