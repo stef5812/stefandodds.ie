@@ -13,7 +13,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="sticky h-screen z-30 bg-white opacity-100 overflow-hidden"
+      className="sticky min-h-screen z-30 bg-white opacity-100 overflow-hidden"
     >
       {/* Background (pure white layer) */}
       <div className="absolute inset-0 bg-white -z-10" />

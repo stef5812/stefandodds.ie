@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="fixed inset-0 z-30 h-screen w-full transition-opacity duration-500"
+      className="fixed inset-0 z-30 min-h-screen w-full transition-opacity duration-500"
     >
       {/* Background */}
       <div className="absolute inset-0 -z-10">
