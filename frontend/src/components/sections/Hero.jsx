@@ -7,9 +7,8 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="fixed inset-0 z-30 min-h-screen w-full transition-opacity duration-500"
+      className="min-h-[100svh] w-full transition-opacity duration-500"
     >
-      {/* Background */}
       <div className="absolute inset-0 -z-10">
         <img
           src={codingImg}
@@ -22,7 +21,6 @@ export default function Hero() {
 
       <Container>
         <div className="relative max-w-3xl pt-24 pb-20 sm:pt-28 sm:pb-28">
-
           <p className="inline-block rounded-full border border-green-400/30 bg-gradient-to-r from-white/10 via-zinc-200/10 to-green-400/10 px-3 py-1 text-xs font-medium text-green-300 shadow-[0_0_12px_rgba(34,197,94,0.18)] backdrop-blur-sm">
             Full Stack • Systems • Delivery
           </p>

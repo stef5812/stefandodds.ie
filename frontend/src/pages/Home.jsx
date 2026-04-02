@@ -15,32 +15,27 @@ export default function Home() {
     const heroEl = heroRef.current;
     const expEl = expRef.current;
     const projEl = document.getElementById("projects");
-  
-    // ✅ INITIAL STATE
-    heroEl.style.opacity = "1";
-    expEl.style.opacity = "0";
-  
+
+    if (!heroEl || !expEl || !projEl) return;
+
     function onScroll() {
       const rect = projEl.getBoundingClientRect();
-  
+
       if (rect.bottom <= window.innerHeight) {
-        // 🔥 Projects fully covering viewport
-        console.log("stage1");
-  
         heroEl.style.opacity = "0";
         expEl.style.opacity = "1";
-  
       } else {
-        // 🔄 Not fully covering yet
-        console.log("stage0");
-  
         heroEl.style.opacity = "1";
         expEl.style.opacity = "0";
       }
     }
-  
+
+    // initial state
+    heroEl.style.opacity = "1";
+    expEl.style.opacity = "0";
+    onScroll();
+
     window.addEventListener("scroll", onScroll);
-  
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -49,25 +44,31 @@ export default function Home() {
       <Header />
 
       <main className="relative">
+        {/* Fixed background layers */}
+        <div className="fixed inset-0">
+          <div
+            ref={heroRef}
+            className="absolute inset-0 transition-opacity duration-700"
+          >
+            <Hero />
+          </div>
 
-        {/* HERO (fixed layer) */}
-        <div ref={heroRef}>
-          <Hero />
+          <div
+            ref={expRef}
+            className="absolute inset-0 transition-opacity duration-700"
+          >
+            <Experience />
+          </div>
         </div>
 
-        {/* EXPERIENCE (fixed layer underneath Hero) */}
-        <div ref={expRef}>
-          <Experience />
-        </div>
-
-        {/* PROJECTS (scroll content) */}
-        <div className="relative h-[220vh] mt-[100vh]">
+        {/* Scrolling content */}
+        <div className="relative z-20 mt-[100svh] h-[220svh]">
           <Projects />
         </div>
 
-        {/* CONTACT */}
-        <Contact />
-
+        <div className="relative z-20">
+          <Contact />
+        </div>
       </main>
     </>
   );
