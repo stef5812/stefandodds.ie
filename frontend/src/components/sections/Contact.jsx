@@ -45,41 +45,42 @@ export default function Contact() {
   const linkedin = "https://www.linkedin.com/in/stefandodds/";
 
   return (
-<section id="contact" className="relative overflow-hidden bg-white py-20">
-      {/* background image */}
-      <div className="pointer-events-none absolute inset-0 opacity-15">
+    <section id="contact" className="relative min-h-screen bg-white z-30">
+
+      {/* Background */}
+      <div className="pointer-events-none absolute inset-0 opacity-15 -z-10">
         <img src={cliffImg} alt="" className="h-full w-full object-cover" />
       </div>
 
-
-
-      {/* green / chrome light bloom */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,197,94,0.18),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.08),transparent_26%)]" />
+      {/* Light bloom */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,197,94,0.18),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.08),transparent_26%)] -z-10" />
 
       <Container>
-        <div className="relative grid gap-10 lg:grid-cols-12 lg:items-start">
+        <div className="relative grid gap-10 lg:grid-cols-12 lg:items-start pt-24 pb-32">
+
+          {/* Left */}
           <div className="lg:col-span-5">
-          <p className="text-sm font-medium tracking-wide text-green-600">
-  Contact
-</p>
+            <p className="text-sm font-medium tracking-wide text-green-600">
+              Contact
+            </p>
 
-<h2 className="mt-2 text-3xl font-semibold tracking-tight text-zinc-900">
-  Let’s build{" "}
-  <span className="bg-gradient-to-r from-zinc-500 via-zinc-300 to-green-500 bg-clip-text text-transparent">
-    something useful
-  </span>
-</h2>
+            <h2 className="mt-2 text-3xl font-semibold tracking-tight text-zinc-900">
+              Let’s build{" "}
+              <span className="bg-gradient-to-r from-zinc-500 via-zinc-300 to-green-500 bg-clip-text text-transparent">
+                something useful
+              </span>
+            </h2>
 
-<p className="mt-4 text-base leading-relaxed text-zinc-600">
-  If you’d like to discuss a role, a project, or a system that needs improving,
-  I’m happy to chat.
-</p>
+            <p className="mt-4 text-base leading-relaxed text-zinc-600">
+              If you’d like to discuss a role, a project, or a system that needs improving,
+              I’m happy to chat.
+            </p>
 
             <div className="mt-6 space-y-2 text-sm text-zinc-600">
               <p>
-              <span className="text-zinc-700">Email:</span>{" "}
+                <span className="text-zinc-700">Email:</span>{" "}
                 <a
-                  className="underline decoration-green-400/40 underline-offset-4 hover:decoration-green-400 hover:text-green-300"
+                  className="underline decoration-green-400/40 underline-offset-4 hover:decoration-green-400 hover:text-green-500"
                   href={`mailto:${email}`}
                 >
                   {email}
@@ -94,12 +95,12 @@ export default function Contact() {
             </div>
           </div>
 
+          {/* Right */}
           <div className="lg:col-span-7">
-          <div className="rounded-3xl bg-white p-6 ring-1 ring-zinc-200 shadow-xl">
+            <div className="rounded-3xl bg-white p-6 ring-1 ring-zinc-200 shadow-xl">
               <h3 className="text-lg font-semibold text-zinc-900">
                 Send a message
               </h3>
-
 
               <form
                 className="mt-6 grid gap-4"
@@ -134,59 +135,21 @@ export default function Contact() {
                   }
                 }}
               >
-                <div className="grid gap-2">
-                  <label className="text-sm text-zinc-700" htmlFor="name">
-                    Name
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="Your name"
-                    className="w-full rounded-2xl border border-zinc-300 bg-white px-4 py-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-green-500"
-                  />
-                </div>
+                <input name="name" placeholder="Your name" className="input" />
+                <input name="email" placeholder="you@domain.com" className="input" />
+                <textarea name="message" rows={6} placeholder="What are you working on?" className="input" />
 
-                <div className="grid gap-2">
-                  <label className="text-sm text-zinc-700" htmlFor="email">
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="you@domain.com"
-                    className="w-full rounded-2xl border border-zinc-300 bg-white px-4 py-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-green-500"
-                  />
-                </div>
-
-                <div className="grid gap-2">
-                  <label className="text-sm text-zinc-700" htmlFor="message">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    placeholder="What are you working on?"
-                    className="w-full rounded-2xl border border-zinc-300 bg-white px-4 py-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-green-500"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="mt-2 inline-flex items-center justify-center rounded-2xl border border-green-400/30 bg-gradient-to-r from-green-500 to-green-600 px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(34,197,94,0.22)] transition-all duration-300 hover:-translate-y-0.5 hover:from-green-400 hover:to-green-500 hover:shadow-[0_0_16px_rgba(34,197,94,0.35)]"
-                >
+                <button type="submit" className="btn-primary">
                   Send message
                 </button>
               </form>
             </div>
 
             <footer className="mt-6 text-xs text-zinc-500">
-              © {new Date().getFullYear()} Stefan Dodds • Built with React +
-              Vite + Tailwind
+              © {new Date().getFullYear()} Stefan Dodds • Built with React + Vite + Tailwind
             </footer>
           </div>
+
         </div>
       </Container>
     </section>

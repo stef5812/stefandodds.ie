@@ -1,3 +1,5 @@
+// frontend/src/components/sections/Experience.jsx
+
 import Container from "../layout/Container";
 import windImg from "../../assets/images/wind.jpeg";
 
@@ -10,91 +12,76 @@ function Role({ years, title, org, extra }) {
         </h3>
         <p className="text-sm text-white/60">{years}</p>
       </div>
-      {extra ? <p className="mt-2 text-sm leading-relaxed text-white/75">{extra}</p> : null}
+      {extra && (
+        <p className="mt-2 text-sm leading-relaxed text-white/75">
+          {extra}
+        </p>
+      )}
     </div>
   );
 }
 
 export default function Experience() {
   return (
-    <section id="experience" className="relative overflow-hidden bg-zinc-950 py-20">
-      {/* Subtle background image */}
-      <div className="pointer-events-none absolute inset-0 opacity-15">
-        <img src={windImg} alt="" className="h-full w-full object-cover" />
+    <section
+      id="experience"
+      className="fixed inset-0 z-10 h-screen w-full transition-opacity duration-500"
+    >
+      {/* Background */}
+      <div className="absolute inset-0 -z-10">
+        <img
+          src={windImg}
+          alt=""
+          className="h-full w-full object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-zinc-950/70 to-zinc-950" />
       </div>
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-zinc-950 via-zinc-950/70 to-zinc-950" />
 
       <Container>
-        <div className="relative grid gap-12 lg:grid-cols-12 lg:items-start">
+        <div className="relative grid gap-12 lg:grid-cols-12 lg:items-start pt-24 pb-24">
+
+          {/* Left */}
           <div className="lg:col-span-5">
-            <p className="text-sm font-medium text-zinc-400">Experience</p>
+            <p className="text-sm font-medium text-zinc-400">
+              Experience
+            </p>
+
             <h2 className="mt-2 text-3xl font-semibold tracking-tight text-white">
-              A lifetime of experience building and supporting software
+              A lifetime of experience building software
             </h2>
 
             <p className="mt-4 text-base leading-relaxed text-zinc-400">
-              Over 15 years in software development (including the City of London),
-              with strengths across CRM administration, database management, reporting,
-              and full stack development. I build systems that solve operational problems —
-              and I’m comfortable owning them end-to-end in production.
+              Over 15 years across full-stack systems, CRM platforms, and production environments.
             </p>
 
             <ul className="mt-6 space-y-2 text-sm text-zinc-300">
-              <li>• Full stack delivery: React/Vite → Node/Express → PostgreSQL/Prisma</li>
-              <li>• Production operations: Docker, PM2, Nginx, Cloudflare</li>
-              <li>• Data & reporting: structured models, analytics, practical dashboards</li>
-              <li>• Calm problem-solving in real-world environments</li>
+              <li>• React/Vite → Node/Express → PostgreSQL/Prisma</li>
+              <li>• Docker, PM2, Nginx, Cloudflare</li>
+              <li>• Data modelling & reporting</li>
+              <li>• Calm real-world problem solving</li>
             </ul>
-
-            <p className="mt-6 text-sm text-zinc-400">
-              Trailblazer: <span className="text-white/80">27 badges</span> •{" "}
-              <span className="text-white/80">16,175 points</span>
-            </p>
           </div>
 
-          <div className="relative lg:col-span-7">
+          {/* Right */}
+          <div className="lg:col-span-7">
             <div className="grid gap-4">
-              <Role
-                years="2022 – Present"
-                title="Support Co-ordinator (CHO4)"
-                org="ALONE"
-                extra="Improved reporting efficiency, tackled technical backlog, and built/introduced practical systems to streamline processes."
-              />
-              <Role
-                years="2018 – 2020"
-                title="Carer (Live-in)"
-                org="Helping Hands"
-                extra="Built resilience, communication, and responsibility — skills that translate directly into supporting people and systems under pressure."
-              />
-              <Role
-                years="2007 – 2014"
-                title="Park Manager (CQP Certified)"
-                org="ValAventure / Acro Branche"
-                extra="Operations leadership with public safety and rescue training — strong real-world risk awareness and decision-making."
-              />
-              <Role
-                years="2004 – 2018"
-                title="Full Stack Developer (Contract) • IT Consultant"
-                org="Foxweb.fr"
-                extra="Delivered and maintained business systems across multiple clients and domains — full lifecycle work from build to support."
-              />
-              <Role
-                years="1991 – 2004"
-                title="Software Developer (Contract) • Director"
-                org="Activate-IT Solutions"
-                extra="Long-term development and delivery of management tools, data systems, and custom software solutions."
-              />
+              <Role years="2022 – Present" title="Support Co-ordinator" org="ALONE" />
+              <Role years="2018 – 2020" title="Carer" org="Helping Hands" />
+              <Role years="2007 – 2014" title="Park Manager" org="ValAventure" />
+              <Role years="2004 – 2018" title="Full Stack Developer" org="Foxweb.fr" />
+              <Role years="1991 – 2004" title="Software Developer" org="Activate-IT" />
             </div>
 
             <div className="mt-6 rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
-              <p className="text-sm font-medium text-white">City of London highlights</p>
+              <p className="text-sm font-medium text-white">
+                City of London highlights
+              </p>
               <p className="mt-2 text-sm leading-relaxed text-white/75">
-                Compiled Quarterly Reports for International Data Corporation (IDC),
-                building strong analytical habits and a practical, data-driven approach to
-                software and reporting.
+                Built strong analytical and reporting foundations at IDC.
               </p>
             </div>
           </div>
+
         </div>
       </Container>
     </section>

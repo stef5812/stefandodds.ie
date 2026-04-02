@@ -1,20 +1,26 @@
+// frontend/src/components/sections/Projects.jsx
+
 import Container from "../layout/Container";
 import ProjectCard from "./ProjectCard";
 
 import recipeImg from "../../assets/images/recipe-header.jpg";
 import libraryImg from "../../assets/images/library-bg.png";
 import serviceLocatorImg from "../../assets/images/service-locator.png";
+import blogImg from "../../assets/images/blog-bg.png";
+import authImg from "../../assets/images/auth-bg.png";
 
 export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative overflow-hidden bg-white py-20"
+      className="sticky h-screen z-30 bg-white opacity-100 overflow-hidden"
     >
-      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.08),transparent_28%),radial-gradient(circle_at_top_left,rgba(161,161,170,0.08),transparent_30%)]" />
+      {/* Background (pure white layer) */}
+      <div className="absolute inset-0 bg-white -z-10" />
 
       <Container>
-        <div className="relative max-w-2xl">
+        <div className="relative max-w-2xl pt-24">
+
           <p className="text-sm font-medium tracking-wide text-green-600">
             Projects
           </p>
@@ -35,57 +41,48 @@ export default function Projects() {
           <div className="mt-8 h-px w-full bg-gradient-to-r from-transparent via-green-500/35 to-transparent" />
         </div>
 
-        <div className="relative mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div className="relative mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+
           <ProjectCard
             title="HalfYourBook"
-            description="A full publishing platform allowing authors to showcase large previews of their work, manage books, uploads, roles, and direct readers to external sales."
-            stack={[
-              "React",
-              "Vite",
-              "Node.js",
-              "Express",
-              "Prisma",
-              "PostgreSQL",
-              "Docker",
-              "PM2",
-              "Nginx",
-              "Cloudflare",
-            ]}
+            description="Publishing platform with previews and author tools."
+            stack={["React", "Node", "Postgres", "Prisma"]}
             href="https://stefandodds.ie/halfyourbook/"
             image={libraryImg}
           />
 
           <ProjectCard
             title="Recipe App"
-            description="A structured recipe management system focused on clean data models, staged cooking steps, ingredient linking, and media handling."
-            stack={[
-              "React",
-              "Node.js",
-              "PostgreSQL",
-              "Prisma",
-              "Docker",
-              "UX Design",
-            ]}
+            description="Structured recipe system."
+            stack={["React", "Node", "Postgres"]}
             href="https://stefandodds.ie/recipe-app/"
             image={recipeImg}
           />
 
           <ProjectCard
+            title="Blog App"
+            description="Multi-user blogging platform."
+            stack={["React", "Express", "Prisma"]}
+            href="https://stefandodds.ie/blog-app/"
+            image={blogImg}
+          />
+
+          <ProjectCard
+            title="Standalone Auth"
+            description="Central auth + role system."
+            stack={["Node", "Auth", "Postgres"]}
+            href="https://auth.stefandodds.ie/"
+            image={authImg}
+          />
+
+          <ProjectCard
             title="Service Locator"
-            description="An interactive location-based resource finder built to help users quickly discover useful nearby services, with mapping, category filtering, and practical local search."
-            stack={[
-              "React",
-              "Google Maps",
-              "Node.js",
-              "Express",
-              "PostgreSQL",
-              "Prisma",
-              "Docker",
-              "Nginx",
-            ]}
+            description="Location-based service finder."
+            stack={["React", "Maps", "Node"]}
             href="https://stefandodds.ie/service-locator/"
             image={serviceLocatorImg}
           />
+
         </div>
       </Container>
     </section>
