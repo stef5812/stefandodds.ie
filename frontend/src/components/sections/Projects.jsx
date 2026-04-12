@@ -1,5 +1,3 @@
-// frontend/src/components/sections/Projects.jsx
-
 import Container from "../layout/Container";
 import ProjectCard from "./ProjectCard";
 
@@ -15,12 +13,10 @@ export default function Projects() {
       id="projects"
       className="sticky min-h-screen z-30 bg-white opacity-100 overflow-hidden"
     >
-      {/* Background (pure white layer) */}
-      <div className="absolute inset-0 bg-white -z-10" />
+      <div className="absolute inset-0 -z-10 bg-white" />
 
       <Container>
         <div className="relative max-w-2xl pt-24">
-
           <p className="text-sm font-medium tracking-wide text-green-600">
             Projects
           </p>
@@ -33,56 +29,54 @@ export default function Projects() {
           </h2>
 
           <p className="mt-4 text-base leading-relaxed text-zinc-600">
-            These are not demos or tutorials. They are production systems,
-            designed, built, deployed, and maintained with real users and real
-            constraints.
+            These are working systems built around real workflows — from
+            full-stack platforms and authentication architecture to practical AI
+            features integrated into live applications.
           </p>
 
           <div className="mt-8 h-px w-full bg-gradient-to-r from-transparent via-green-500/35 to-transparent" />
         </div>
 
         <div className="relative mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-
           <ProjectCard
             title="HalfYourBook"
-            description="Publishing platform with previews and author tools."
-            stack={["React", "Node", "Postgres", "Prisma"]}
+            description="Publishing platform with author tools, previews, and structured content workflows."
+            stack={["React", "Node", "PostgreSQL", "Prisma"]}
             href="https://stefandodds.ie/halfyourbook/"
             image={libraryImg}
           />
 
           <ProjectCard
             title="Recipe App"
-            description="Structured recipe system."
-            stack={["React", "Node", "Postgres"]}
+            description="Structured recipe platform designed for creation, organisation, and future AI-assisted recipe workflows."
+            stack={["React", "Node", "PostgreSQL", "Prisma"]}
             href="https://stefandodds.ie/recipe-app/"
             image={recipeImg}
           />
 
           <ProjectCard
             title="Blog App"
-            description="Multi-user blogging platform."
-            stack={["React", "Express", "Prisma"]}
+            description="Multi-user blogging platform with AI-assisted editing, rewrite tools, and generated titles."
+            stack={["React", "Express", "Prisma", "Gemini API"]}
             href="https://stefandodds.ie/blog-app/"
             image={blogImg}
           />
 
           <ProjectCard
             title="Standalone Auth"
-            description="Central auth + role system."
-            stack={["Node", "Auth", "Postgres"]}
+            description="Central authentication and role system shared across multiple applications."
+            stack={["Node", "Express", "PostgreSQL", "Auth"]}
             href="https://auth.stefandodds.ie/"
             image={authImg}
           />
 
           <ProjectCard
             title="Service Locator"
-            description="Location-based service finder."
-            stack={["React", "Maps", "Node"]}
+            description="Location-based service finder with mapped results, backend APIs, and workflow-focused design."
+            stack={["React", "Maps", "Node", "REST API"]}
             href="https://stefandodds.ie/service-locator/"
             image={serviceLocatorImg}
           />
-
         </div>
       </Container>
     </section>
